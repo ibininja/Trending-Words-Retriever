@@ -1,5 +1,5 @@
 # Trending-Words-Retriever
-This console program scan a given document to retrieve mostly used keywords. This to be used to analyze what trending posting contain what words to; see what has what impact.
+This console program scans a given document to retrieve mostly used keywords. This to be used to analyze what trending posts contain what words; to see what has what impact.
 
 How To run:
 All files to use to be in the same directory.
