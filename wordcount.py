@@ -7,13 +7,10 @@ def CleanLine(line):
     from string import punctuation
     import re
     r= re.compile(r'[{}]'.format(punctuation))
-    new_strs=r.sub(' ', line)
-    print("Line original:", line)
-    print("Line modified:", new_strs)
-    print("Line modified line splitted words are:", new_strs.split())
+    new_strs=r.sub(' ', line) 
     #This method of printing below can sometime split on unicode or special charaters
     #not very effective for language that use special characters.
-    print("The splitted words using split regex are:", re.split(r'[^0-9A-Za-z]+',line))
+    #print("The splitted words using split regex are:", re.split(r'[^0-9A-Za-z]+',line))
     return new_strs
 
 #Return list of words
@@ -22,7 +19,8 @@ def SplitLine(line):
 
 #Promt user for a yes or no; this verifies users input
 def YesOrNo(user_input): 
-    if user_input  == 1:
+        
+    if user_input  == '1':
         print("You choose to overwrite the file...Overwriting started")
         return True
     else:
@@ -67,7 +65,7 @@ def CalculateWordFrequencies(filePath):
                 wordCounts[word]+=1
             else:
                 wordCounts[word]=1
-        print("\n",line, "--" * 8)
+        print("\n",line, "\n", "--" * 8) #Print each line.
     print("The Dictionary with Word Counts:",wordCounts)
     PrintResultToFile(wordCounts, "resultTest.txt")
     print("Number of lines found:", counter)
